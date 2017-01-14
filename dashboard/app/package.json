@@ -1,0 +1,14 @@
+{
+  "name": "Dashboard",
+  "version": "0.1.0",
+  "description": "Dashboard application built with Electron",
+  "author": {
+    "name": "Shmish",
+    "email": ""
+  },
+  "license": "MIT",
+  "main": "javascripts/main/index.js",
+  "dependencies": {
+
+  }
+}

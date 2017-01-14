@@ -1,2 +1,6 @@
+.tmp
 node_modules
-.vscode
+builds
+packages
+bower_components
+app/node_modules

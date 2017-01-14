@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/networktables/networktables.js"></script>
+    </head>
+    <body>
+        <div id="test">
+
+        </div>
+    </body>
+    <script>
+        //NetworkTables.addWsConnectionListener(onNetworkTablesConnection, true);
+        NetworkTables.addRobotConnectionListener(onRobotConnection, true);
+        //NetworkTables.addGlobalListener(onValueChanged, true);
+
+        function onRobotConnection(connected) {
+            document.getElementById('test').innerHTML = connected ? "Connected!" : "Disconnected";
+        }
+    </script>
+</html>
