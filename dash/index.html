@@ -1,43 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<link rel="stylesheet" href="one.css">
-		<link rel="stylesheet" href="two.css">
-		<link rel="stylesheet" href="three.css">
-		<link rel="stylesheet" href="four.css">
-		<link rel="stylesheet" href="style.css">
-		<script src="/networktables/networktables.js"></script>
-	</head>
-	<body>
+    <head>
+        <title>Daedalus Dashboard</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
 
-		<div class="pure-g" style="overflow:hidden;height:100vh;width:100vw;background-color:red;">
-			<!--sidebar-->
-			<div class="pure-u-1-24" style="background-color:#22222C;height:100vh;">
+        <div class="wrapper">
+            <div class="header">-DAEDALUS-</div>
+            <div class="contentWrapper">
+                <div class="mapWrapper"></div>
+                <div class="camFeedWrapper">
+                    <img src="/link/to/feed.jpg" height="100%" width="100%" />
+                </div>
+                <div class="autoSelectWrapper"></div>
+            </div>
+            <div class="statusWrapper">
+                <div class="statusItem one"> Robot Comms </div>
+                <div class="statusItem two"> Robot Code </div>
+                <div class="statusItem three"> Battery </div>
+                <div class="statusItem four"> Camera Feed </div>
+                <div class="statusItem five"> Pressure </div>
+            </div>
+        </div>
 
-			</div>
-			<!--main-->
-			<div class="pure-u-23-24" style="background-color:#2E3442;height:100vh;">
-				<div class="pure-u-1-1" style="background-color:#2E3442;height:10vh;"></div>
-				<div class="pure-u-16-24" style="background-color:#2E3442;height:80vh;margin-top:20px;margin-left:70px;">
-					<div class="pure-u-1-1" style="background-color:#22222C;height:49%;display:flex;align-items:center;justify-content:center;" id="graph-contain">
-						<canvas id="graph" width="800" height="250"></canvas>
-					</div>
-					<div class="pure-u-12-24" style="background-color:#22222C;height:49%;margin-top:10px;">
-
-					</div>
-					<div class="pure-u-11-24" style="background-color:#22222C;height:49%;margin-top:10px;float:right;">
-						<img src="http://roboRIO-1124-FRC.local:1181/?action=stream" style="height:100%;width:100%;">
-					</div>
-				</div>
-				<div class="pure-u-5-24" style="background-color:#22222C;height:80vh;margin-top:20px;margin-left:10px;">
-
-				</div>
-			</div>
-		</div>
-
-		<!--script src="js.js" charset="utf-8"></script-->
-		<script src="graph.js" charset="utf-8"></script>
-	</body>
+        <script src="index.js"></script>
+    </body>
 </html>

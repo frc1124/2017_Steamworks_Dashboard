@@ -1,0 +1,136 @@
+* {
+    padding: 0px;
+    margin: 0px;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    font-family: sans-serif;
+    font-size: 25px;
+
+    box-sizing: border-box;
+}
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+}
+/*header*/
+.header {
+    width: 100%;
+    height: 9%;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1B1B1B;
+    color: #FEFEFE;
+
+    font-family: monospace;
+    letter-spacing: 4px;
+    -webkit-text-stroke-color: #1B1B1B;
+    -webkit-text-stroke-width: 1px;
+}
+
+/*content*/
+.contentWrapper {
+    width: 100%;
+    height: 76%;
+
+    position: absolute;
+    top: 9%;
+    left: 0%;
+}
+.mapWrapper {
+    width: 34%;
+    height: 100%;
+
+    position: absolute;
+    top: 0%;
+    left: 0%;
+
+    background-color: #2D2D2D;
+    color: #FFF;
+}
+.camFeedWrapper {
+    width: 50%;
+    height: 100%;
+
+    position: absolute;
+    top: 0%;
+    left: 34%;
+
+    background-color: #3D3D3D;
+    color: #FFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.autoSelectWrapper {
+    width: 16%;
+    height: 100%;
+
+    position: absolute;
+    top: 0%;
+    right: 0%;
+
+    background-color: #2D2D2D;
+    color: #FFF;
+}
+
+/*status*/
+.statusWrapper {
+    width: 100%;
+    height: 15%;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+    background-color: #1B1B1B;
+    color: #FFF;
+}
+.statusItem {
+    width: 20%;
+    height: 100%;
+
+    border-top-color: rgb(255,59,48);
+    border-top-style: solid;
+    border-top-width: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 15px;
+}
+.one {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+.two {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+}
+.three {
+    position: absolute;
+    top: 0%;
+    left: 40%;
+}
+.four {
+    position: absolute;
+    top: 0%;
+    left: 60%;
+}
+.five {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+}
