@@ -55,6 +55,46 @@
 
     background-color: #2D2D2D;
     color: #FFF;
+
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.mapButton {
+    cursor: pointer;
+
+    font-size: 10px;
+
+    height: 30px;
+    width: 110px;
+
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #FFF;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #2D2D2D;
+    color: #FFF;
+
+    animation: all ease 500ms;
+}
+.mapButton:hover {
+    background-color: #FFF;
+    color: #2D2D2D;
 }
 .camFeedWrapper {
     width: 50%;
