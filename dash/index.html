@@ -10,6 +10,13 @@
         <div class="wrapper">
             <div class="header">-DAEDALUS-</div>
             <div class="contentWrapper">
+                <div class="dataWrapper">
+                    <div class="ledgend">
+                        <div class="ledgendItem"><div class="ledgendDot" style="background-color:#00FFFF"></div><span>speed</span></div>
+                        <div class="ledgendItem"><div class="ledgendDot" style="background-color:#FF8C00"></div><span>pressure</span></div>
+                    </div>
+                    <canvas id="graph"></canvas>
+                </div>
                 <div class="mapWrapper">
                     <div class="mapButton">Gear Door</div>
                     <div class="mapButton">Climber Door</div>
@@ -19,12 +26,10 @@
                     <div class="mapButton"></div>
                     <div class="mapButton"></div>
                     <div class="mapButton"></div>
-                    <div class="mapButton"></div>
-
-                    
+                    <div class="mapButton"></div> 
                 </div>
                 <div class="camFeedWrapper">
-                    <img id="camFeed" src="http://roboRIO-1124-FRC.local:1181/?action=stream" onerror="document.getElementById('camFeed').setAttribute('src','http://roboRIO-1124-FRC.local:1181/?action=stream');" height="100%" width="100%" />
+                    <!--img id="camFeed" src="http://roboRIO-1124-FRC.local:1181/?action=stream" onerror="document.getElementById('camFeed').setAttribute('src','http://roboRIO-1124-FRC.local:1181/?action=stream');" height="100%" width="100%" /-->
                 </div>
                 <div class="autoSelectWrapper">
                     <div class="autoItem" onclick="sendAuto(0);">None</div>
