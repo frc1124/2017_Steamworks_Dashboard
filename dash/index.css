@@ -122,6 +122,22 @@
     background-color: #2D2D2D;
     color: #FFF;
 }
+.autoItem {
+    font-size: 15px;
+
+    width: 100%;
+    height: 100px;
+    background-color: #2D2D2D;
+    color: #FFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.autoItem:hover {
+    background-color: #FFF;
+    color: #2D2D2D;
+}
 
 /*status*/
 .statusWrapper {
