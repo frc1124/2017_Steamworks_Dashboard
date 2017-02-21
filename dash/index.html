@@ -18,10 +18,10 @@
                     <canvas id="graph"></canvas>
                 </div>
                 <div class="mapWrapper">
-                    <div class="mapButton">Gear Door: <span id="gearDoor"></span>div>
-                    <div class="mapButton">Climber Door: <span id="climberDoor"></span>div>
-                    <div class="mapButton">Battery: <span id="battery"></span>div>
-                    <div class="mapButton">Speed: <span id="speed"></span>div>
+                    <div class="mapButton">Gear Door: <span id="gearDoor"></span></div>
+                    <div class="mapButton">Climber Door: <span id="climberDoor"></span></div>
+                    <div class="mapButton">Battery: <span id="battery"></span></div>
+                    <div class="mapButton">Speed: <span id="speed"></span></div>
                     <div class="mapButton"></div>
                     <div class="mapButton"></div>
                     <div class="mapButton"></div>
@@ -29,11 +29,16 @@
                     <div class="mapButton"></div> 
                 </div>
                 <div class="camFeedWrapper">
-                    <!--img id="camFeed" src="http://roboRIO-1124-FRC.local:1181/?action=stream" onerror="document.getElementById('camFeed').setAttribute('src','http://roboRIO-1124-FRC.local:1181/?action=stream');" height="100%" width="100%" /-->
+                    <img id="camFeed" src="http://roboRIO-1124-FRC.local:1181/?action=stream" onerror="document.getElementById('camFeed').setAttribute('src','http://roboRIO-1124-FRC.local:1181/?action=stream');" height="100%" width="100%" />
                 </div>
                 <div class="autoSelectWrapper">
                     <div class="autoItem" onclick="sendAuto(0);">None</div>
                     <div class="autoItem" onclick="sendAuto(1);">Drive forward</div>
+                    <div class="autoItem" onclick="sendAuto(2);">Center gear</div>
+                    <div class="autoItem" onclick="sendAuto(3);">Center gear => left</div>
+                    <div class="autoItem" onclick="sendAuto(4);">Center gear => right</div>
+                    <div class="autoItem" onclick="sendAuto(5);">Right gear</div>
+                    <div class="autoItem" onclick="sendAuto(6);">Left gear</div>
                 </div>
             </div>
             <div class="statusWrapper">

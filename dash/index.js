@@ -9,11 +9,15 @@ NetworkTables.addKeyListener('dash/status/pressure', function() {}, true);
 NetworkTables.addKeyListener('/dash/gearDoor', function(key,value,isNew) { document.getElementById('gearDoor').innerText = value; }, true);
 NetworkTables.addKeyListener('/dash/climberDoor', function(key,value,isNew) { document.getElementById('climberDoor').innerText = value; }, true);
 NetworkTables.addKeyListener('/dash/battery', function(key,value,isNew) { document.getElementById('battery').innerText = value; }, true);
-NetworkTables.addKeyListener('/dash/speed', function(key,value,isNew) { document.getElementById('speed').innerText = value; }, true);
+NetworkTables.addKeyListener('/dash/speed', function(key,value,isNew) {
+    document.getElementById('speed').innerText = value;
+    value.speed = HEIGHT - ((value / scales.speed)*HEIGHT);
+ }, true);
 
 //autoSelect
 NetworkTables.addKeyListener('/dash/auto', function(key,value,isNew) {
-    document.getElementsByClassName('selectedAuto')[0].setAttribute('class','autoItem');
+    selectedAuto = document.getElementsByClassName('selectedAuto');
+    if(selectedAuto.length > 0) { document.getElementsByClassName('selectedAuto')[0].setAttribute('class','autoItem'); }
     document.getElementsByClassName('autoItem')[value].setAttribute('class','autoItem selectedAuto');
 }, true);
 function sendAuto(id) { NetworkTables.putValue('/dash/auto', id); }
@@ -48,7 +52,7 @@ var dataSets = {
     speed:[],
     pressure:[]
 }
-NetworkTables.addKeyListener('/dash/speed', function(key,value,isNew) { value.speed = HEIGHT - ((value / scales.speed)*HEIGHT); });
+//NetworkTables.addKeyListener('/dash/speed', function(key,value,isNew) {  }, true);
 NetworkTables.addKeyListener('/dash/pressure', function(key,value,isNew) { value.pressure = HEIGHT - ((value / scales.pressure)*HEIGHT); });
 
 setInterval(function() {
