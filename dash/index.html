@@ -8,12 +8,14 @@
     <body>
 
         <div class="wrapper">
-            <div class="header">-DAEDALUS-</div>
+            <div class="header">-SPEARMINT-</div>
             <div class="contentWrapper">
                 <div id="dataWrapper" class="dataWrapper">
                     <div class="ledgend">
                         <div class="ledgendItem"><div class="ledgendDot" style="background-color:#00FFFF"></div><span>speed</span></div>
                         <div class="ledgendItem"><div class="ledgendDot" style="background-color:#FF8C00"></div><span>pressure</span></div>
+                        <div class="ledgendItem"><div class="ledgendDot" style="background-color:#FF0000"></div><span>time</span></div>
+                        <div class="ledgendItem"><div class="ledgendDot" style="background-color:#00FF00"></div><span>battery</span></div>
                     </div>
                     <canvas id="graph"></canvas>
                 </div>
@@ -30,6 +32,7 @@
                 </div>
                 <div class="camFeedWrapper">
                     <img id="camFeed" src="http://roboRIO-1124-FRC.local:1181/?action=stream" onerror="document.getElementById('camFeed').setAttribute('src','http://roboRIO-1124-FRC.local:1181/?action=stream');" height="100%" width="100%" />
+                    <canvas id="canvasTwo"></canvas>
                 </div>
                 <div class="autoSelectWrapper">
                     <div class="autoItem" onclick="sendAuto(0);">None</div>

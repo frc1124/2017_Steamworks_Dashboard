@@ -122,6 +122,14 @@
     justify-content: center;
     align-items: center;
 }
+#canvasTwo {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
 .autoSelectWrapper {
     width: 16%;
     height: 100%;
@@ -214,7 +222,7 @@
 .ledgend {
     z-index: 10;
     width:11%;
-    height: 10%;
+    height: 30%;
     
     position: absolute;
     top: 0px;
