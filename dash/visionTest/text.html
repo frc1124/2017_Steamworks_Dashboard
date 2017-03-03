@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="../tracking-min.js"></script>
+    </head>
+    <body>
+        <video id="canvas" src="" autoplay></video>
+        <input type="file"  accept="video/*;capture=camcorder"></input>
+    </body>
+    <script>
+var canvas = document.getElementById('canvas');
+//var ctx = canvas.getContext('2d');
+document.body.appendChild(canvas);
+canvas.width = 600;
+canvas.height = 600;
+navigator.getUserMedia({video:true}, handleStream, errorStream);
+function handleStream(stream) { canvas.src = window.URL.createObjectURL(stream); }
+function errorStream(error) { console.log('oh no!', error); }
+
+//Vision code
+tracking.ColorTracker.registerColor('green', function(r, g, b) { return( (r>50 && g>200 && b>50) ? true : false ); });
+var colors = new tracking.ColorTracker(['green']);
+var myTracker = new tracking.Tracker('target');
+var trackerTask = tracking.track('#canvas', colors);
+
+colors.on('track', function(event) { console.log( (event.data.length === 0) ? 0 : ((event.data[0].x+event.data[1].x)/2)+((event.data[0].width+event.data[1].width)/2) ); });
+colors.on('track', function(event) {
+    if(event.data.length === 0) {
+        console.log(0);
+    }
+    else {
+        event.data.forEach(function(rect) {
+            console.log(rect.x);
+        })
+    }
+});
+trackerTask.run();
+    </script>
+</html>

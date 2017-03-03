@@ -44,6 +44,7 @@ NetworkTables.addKeyListener('dash/status/pressure', function() {}, true);
 
 //map buttons
 NetworkTables.addKeyListener('/dash/gearDoor', function(key,value,isNew) { document.getElementById('gearDoor').innerText = value; }, true);
+NetworkTables.addKeyListener('/dash/time', function(key,value,isNew) { document.getElementById('time').innerText = value; }, true);
 NetworkTables.addKeyListener('/dash/climberDoor', function(key,value,isNew) { document.getElementById('climberDoor').innerText = value; }, true);
 NetworkTables.addKeyListener('/dash/battery', function(key,value,isNew) { document.getElementById('battery').innerText = value; }, true);
 NetworkTables.addKeyListener('/dash/speed', function(key,value,isNew) {
@@ -133,4 +134,11 @@ setInterval(function() {
     ctxTwo.lineTo(centerLine,canvasTwo.height);
     ctxTwo.strokeStyle = '#FF0000';
     ctxTwo.stroke();
-},50)
+},50);
+
+//Vision code
+var myTracker = new tracking.Tracker('target');
+tracking.ColorTracker.registerColor('green', function(r, g, b) { return( (r>50 && g>200 && b>50) ? true : false ); });
+var colors = new tracking.ColorTracker(['green']);
+var trackerTask = tracking.track('#camFeed', colors);
+colors.on('track', function(event) { NetworkTables.putValue( '/jsVision/offset', (event.data.length === 0) ? 0 : ((event.data[0].x+event.data[1].x)/2)+((event.data[0].width+event.data[1].width)/2) ); });
